@@ -22,7 +22,7 @@ export function SideBar({children}:{children:React.ReactNode}) {
       ),
     },
     {
-      label: "Profile",
+      label: "Our Doctors",
       href: "#",
       icon: (
         <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
@@ -47,7 +47,7 @@ export function SideBar({children}:{children:React.ReactNode}) {
   return (
     <div
       className={cn(
-        "rounded-md flex flex-col md:flex-row bg-transparent dark:bg-neutral-800 w-full flex-1 max-w-7xl mx-0 overflow-hidden",
+        " rounded-md flex flex-col md:flex-row bg-transparent dark:bg-neutral-800 w-full flex-1 mx-auto overflow-x-hidden",
         "h-screen " 
       )}
     >
@@ -60,8 +60,6 @@ export function SideBar({children}:{children:React.ReactNode}) {
                 <SidebarLink key={idx} link={link} />
               ))}
             </div>
-          </div>
-          <div>
           </div>
         </SidebarBody>
       </Sidebar>
@@ -79,7 +77,7 @@ export const Logo = () => {
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="font-medium text-bluek dark:text-white whitespace-pre"
+        className="font-medium text-blue dark:text-white whitespace-pre"
       >
         MediQure
       </motion.span>
