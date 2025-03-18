@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "../components/ui/sidebarUi";
 import {
-  IconArrowLeft,
-  IconBrandTabler,
+  IconUser,
+  IconHome2,
   IconSettings,
-  IconUserBolt,
+  IconUsers,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -15,17 +15,17 @@ import { cn } from "@/lib/utils";
 export function SideBar({children}:{children:React.ReactNode}) {
   const links = [
     {
-      label: "Dashboard",
-      href: "#",
+      label: "Home",
+      href: "/",
       icon: (
-        <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconHome2 className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Our Doctors",
-      href: "#",
+      href: "/ourdoctors",
       icon: (
-        <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconUsers className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
@@ -36,10 +36,10 @@ export function SideBar({children}:{children:React.ReactNode}) {
       ),
     },
     {
-      label: "Logout",
-      href: "#",
+      label: "Login",
+      href: "/login",
       icon: (
-        <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconUser className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
   ];
